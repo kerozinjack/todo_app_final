@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="#FFFFFF"
+        android:elevation="3dp">
+
+        <TextView
+            android:id="@+id/greetingTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Üdv, xy! 👋"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:text="Vissza"
+            android:textSize="14sp"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#222"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beállítások"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alapértelmezett prioritás"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/defaultPriorityGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/priorityLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🟢 Alacsony"
+                android:textColor="#333"/>
+
+            <RadioButton
+                android:id="@+id/priorityMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🟡 Közepes"
+                android:checked="true"
+                android:textColor="#333"/>
+
+            <RadioButton
+                android:id="@+id/priorityHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔴 Magas"
+                android:textColor="#333"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teljesített feladatok"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="16dp"/>
+
+        <Switch
+            android:id="@+id/switchHideCompleted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teljesítettek elrejtése"
+            android:textColor="#333"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rendezés mód"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/sortModeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/sortNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nincs"
+                android:textColor="#333" />
+
+            <RadioButton
+                android:id="@+id/sortPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prioritás szerint"
+                android:checked="true"
+                android:textColor="#333"/>
+
+            <RadioButton
+                android:id="@+id/sortABC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC sorrend"
+                android:textColor="#333"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tisztítás"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="16dp"/>
+
+        <Button
+            android:id="@+id/clearCompletedBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Teljesített feladatok törlése"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F44336" />
+
+    </LinearLayout>
+</LinearLayout>
